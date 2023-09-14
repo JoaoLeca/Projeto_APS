@@ -1,0 +1,147 @@
+/*Fontes*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+@import url(styles/style-produto.css);
+
+@import url(styles/style-footer.css);
+
+:root {
+  --Colorido: background: linear-gradient(90deg, #000624 0%, #101e54 7%, #304db4 18%, #4a479d 42%, #923792 60%, #a73247 82%, rgb(221, 233, 87) 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Navbar*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background-color: white;
+}
+
+.logo {
+    font-size: 2em;
+    color: #000000;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navigation .diretorios {
+    position: relative;
+    font-size: 1.3em;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation .diretorios::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #0071e3;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.navigation .diretorios:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+/*Fim da Navbar*/
+
+body{
+    background: linear-gradient(90deg, rgba(0,6,36,1) 0%, rgba(16,36,108,1) 31%, rgba(87,199,233,1) 97%);
+}
+
+/*Main*/
+
+main section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 10rem;
+    margin-bottom: 3em;
+    height: 95.2vh;
+}
+
+.main-text img{
+    width: 15rem;
+    margin-bottom: 3vh;
+}
+
+.main-text h1{
+    font-size: 13rem;
+    margin-left: -2.3rem;
+    color: white;
+    font-weight: 600;
+}
+
+.main-text h3{
+    font-size: 3.5em;
+    color: white;
+    margin-bottom: 10px;
+    line-height: 2.5em;
+    font-weight: 700;
+    
+}
+
+.main-text p{
+    margin-bottom: 1.5rem;
+    color: white;
+    font-size: 20px;
+}
+
+.main-text .btn{
+    padding: 5px 25px;
+    background: #0071e3;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all 0.5s;
+}
+
+.main-text .btn:hover{
+    opacity: .75;
+}
+
+.main-img img{
+    width: 500px;
+    transform: rotate(-7deg);
+    position: relative; top: 80px;
+}
+
+.circle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#e0dbd7;
+    clip-path: circle(800px at right 1000px);
+}
+
+/*Fim do Main*/

@@ -1,0 +1,122 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+/*Navbar*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background-color: white;
+}
+/*Fim da Navbar*/
+
+.logo {
+    font-size: 2em;
+    color: #000000;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navigation .diretorios {
+    position: relative;
+    font-size: 1.3em;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation .diretorios::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #0071e3;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: .5s;
+}
+
+.navigation .diretorios:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fdfdfd;
+}
+
+.sobre-section{
+    background: url(https://i.pinimg.com/originals/c6/3c/ae/c63cae1344766f14d9d184e5aafed065.gif) no-repeat left;
+    background-size: 55%;
+    background-color: rgb(26, 25, 31);
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.container-interno{
+    width: 55%;
+    float: right;
+    background-color: #fdfdfd;
+    padding: 150px;
+}
+
+.container-interno h1{
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.texto{
+    font-size: 16px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width:1200px){
+    .container-interno{
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .sobre-section{
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .container-interno{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .sobre-section{
+        padding: 0;
+    }
+    .container-interno{
+        padding: 60px;
+    }
+}
